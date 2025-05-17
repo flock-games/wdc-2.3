@@ -1,12 +1,20 @@
 <script setup lang="ts">
-const main = useMain()
+import "media-chrome";
 </script>
 
 <template>
-    <h1 class="text-2xl font-inter">Hello, {{  main.number  }} doubled is  {{  main.double  }}</h1>
-    <button class='btn btn-primary'  @click="main.increment()">
-        MORE
-        <font-awesome-icon icon="fa-solid fa-user-secret" />
-    </button><br>
-    <NuxtLink to="/page2">Page 2</NuxtLink>
+  <media-controller>
+    <video
+      slot="media"
+      src="https://stream.mux.com/A3VXy02VoUinw01pwyomEO3bHnG4P32xzV7u1j1FSzjNg/high.mp4"
+      poster="https://image.mux.com/A3VXy02VoUinw01pwyomEO3bHnG4P32xzV7u1j1FSzjNg/thumbnail.jpg"
+    ></video>
+    <media-control-bar>
+      <media-play-button></media-play-button>
+      <media-mute-button></media-mute-button>
+      <media-time-range></media-time-range>
+      <media-time-display></media-time-display>
+      <media-fullscreen-button></media-fullscreen-button>
+    </media-control-bar>
+  </media-controller>
 </template>

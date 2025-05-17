@@ -1,9 +1,1 @@
-module.exports = {
-    theme: {
-        extend: {
-          fontFamily: {
-            'inter': ['Inter'],
-          },
-        },
-      },
-}
+module.exports = {};
